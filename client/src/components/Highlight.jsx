@@ -5,8 +5,8 @@ import { MdStars } from 'react-icons/md/';
 import { MdStar } from 'react-icons/md/';
 import { MdHighlightOff } from 'react-icons/md/';
 
-
-export const Highlight = ({ data, visibility, addFavorite, removeFavorite }) => {
+// Save button etc
+export const Highlight = ({ data, visibility, addSave, removeSave }) => {
     const color = {background: 'white', border: 'white', color: 'red'};
 	
 	// Transform numerical rating into 5 star UI element
@@ -27,12 +27,12 @@ export const Highlight = ({ data, visibility, addFavorite, removeFavorite }) => 
 			return stars;
 	};
 
-	const addToFavorites = () => {
-		addFavorite(data);
+	const addToSaved = () => {
+		addSave(data);
 	};
 
-	const removeFromFavorites = () => {
-		removeFavorite(data);
+	const removeFromSaved = () => {
+		removeSave(data);
 	};
 
 	if (visibility.highlight) {
@@ -49,9 +49,9 @@ export const Highlight = ({ data, visibility, addFavorite, removeFavorite }) => 
 				</div>
 				<hr/>
 				<div>
-					{!visibility.favorites ? 
-						<button onClick={() => addToFavorites()}><MdStar /> Favorite</button> : 
-						<button style={color} onClick={() => removeFromFavorites()}><MdHighlightOff /> Remove</button>}
+					{!visibility.saved ? 
+						<button onClick={() => addToSaved()}><MdStar /> Save it!</button> : 
+						<button style={color} onClick={() => removeFromSaved()}><MdHighlightOff /> Remove</button>}
 					{(data.price) ? <a href={data.purchase}> Buy ${data.price}</a> : null}
 				</div>
 			</section>

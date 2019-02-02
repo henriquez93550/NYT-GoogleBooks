@@ -1,5 +1,6 @@
 import React from 'react';
 import { Component } from 'react';
+import './App.css';
 import { DashBoard } from './components/DashBoard';
 import { Highlight } from './components/Highlight';
 import { BookList } from './components/BookList';
@@ -111,7 +112,7 @@ class App extends Component {
 
 	componentDidMount() {		
 		// Populate the saved list
-		axios.get('/api/saved')
+		axios.get('/api/save')
 		.then(response =>{
 			console.log('Fetched from mongo', response.data);
 			this.setState({
@@ -148,10 +149,6 @@ class App extends Component {
 			});
 		}		
 	}
-
-	// componentWillUnmount() {
-	// 	this.serverRequest.abort();
-	// }
 
 	// Set the current query in state on change
 	updateQuery(queryObject) {

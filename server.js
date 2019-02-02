@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const path = require('path');
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8081;
 const options = {
       allow : {
           origin: '*',
@@ -14,7 +14,7 @@ const options = {
 //require db connection
 require('./models');
 
-// import favorite db
+// import saved db
 const Saved = require('./saved');
 
 
@@ -24,8 +24,7 @@ app.use(bodyParser.urlencoded({ extended : true }));
 app.use(bodyParser.json());
 
 // Make static assets available to UI
-app.use(express.static('./client/build'));
-// app.use(express.static('./client/build'));
+// app.use(express.static('./client/'));
 
 const router = express.Router();
 // Serve the UI over express server
@@ -42,7 +41,7 @@ router.get('/api', function(req, res){
 app.use('/api', router);
 
 // Route for all records in collection
-router.route('/favorites')
+router.route('/saved')
 
   // Add a favortie entry to the database
   .post(function(req, res){
@@ -64,8 +63,8 @@ router.route('/favorites')
         res.send(err);
       } else {
         res.json({
-          message: 'Favorite added',
-          saved
+          message: 'Save added',
+          saved: saved
         });
       }
     })    

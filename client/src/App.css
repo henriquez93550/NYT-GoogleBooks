@@ -1,32 +1,140 @@
-.App {
-  text-align: center;
+button {
+  border: 1px solid black;
+  background: linear-gradient(to bottom, gray, whitesmoke);
+  font: bold 1rem/1;
+  color: black;
+  text-shadow: 1px 1px 1px blue;
+  width: 80px;
+  border-radius: 50px;
+  height: 2.2rem;
+  margin-bottom: 10px;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
+img {
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: left;
 }
-
-.App-link {
-  color: #61dafb;
+form {
+  clear: both;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+#book-form, #book-highlight, #book-list div, #favorites div {
+		margin: .5rem;
+		background-color: lightblue;
+		border-bottom: .3rem solid black;
+    box-shadow: .3rem .3rem .3rem black;
+    }	
+#saved div {
+	border-bottom: .3rem solid black;
   }
-  to {
-    transform: rotate(360deg);
+  
+#book-form {
+    margin-bottom: 1rem;
+    padding: .5rem 0 1.25rem 2%;
+  }
+  h1 {
+    font: 2rem;
+  }
+.title {
+  flex-direction: column;
+  justify-content: right;
+  text-shadow: 1px 1px 1px whitesmoke;
+}
+form {
+    clear: both;
+  }
+select {	
+    height: 49px;    
+    padding-left: 1%;
+    box-shadow: none;
+    border-radius: 15px 0 0 15px;		    
+  }
+
+option {
+    background: transparent;
+    color: green;
+  }
+  input[type="text"] {
+    width: 50%;
+    height: 45px;
+    padding-left: .5rem;
+    border: 1px solid black;
+    font: 1rem/1;
+  }
+  input:focus {
+      outline: black;
+    }
+input[type="submit"] {
+      height: 50px;
+      border-radius: 0 15px 15px 0;
+      width: 22.5;
+    }
+
+#book-highlight {
+		animation: rowAnimation .5s ease 0s forwards;
+    margin-bottom: 1rem;
+    }
+
+h2 {
+    padding-top: 1rem;
+    padding-left: 1rem;
+    font: 2rem/1;
+    }
+
+h3 {
+  padding-left: .25rem;
+  font: 1.5rem/1;
+  }
+/* star */
+span {
+  padding: .75rem;
+  font-size: 2rem;
+  color: black;
+}
+
+p {
+  padding: .75rem;
+  font: 1rem/1.5;
+}
+img {
+  padding: 0 .75rem  0;
+}
+hr {
+  width: 90%;
+}
+/* move github button */
+a, .saved-btn, .home-btn {				
+  margin: 1rem 0 1em 12.5%;
+  border-radius: 15px;
+  text-decoration: none;
+  padding: 4rem;
+  justify-content: space-between;
+}
+#book-list, #favorites {
+  margin-bottom: 175px;
+}
+
+#app-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  width: 100vw;
+  padding-bottom: .5rem;
+  background: lightskyblue;
+  font-size: 3rem;
+  color: black; 
+}
+
+@keyframes rowAnimation {
+  0% {
+    opacity: 0;
+    transform: scale(.25);
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    transform: scale(1.1)
+  }
+  100% {
+    transform: scale(1);
   }
 }

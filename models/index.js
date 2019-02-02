@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const URI = require('../client/config/index');
+const URI = require('../client/src/config/index');
 
 //Connect to MongoDB
 mongoose.connect(process.env.MONGODB_URI || URI);
