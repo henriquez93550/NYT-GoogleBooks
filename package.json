@@ -1,0 +1,32 @@
+{
+  "name": "NYT-GoogleBooks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/henriquez93550/NYT-GoogleBooks.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/henriquez93550/NYT-GoogleBooks/issues"
+  },
+  "homepage": "https://github.com/henriquez93550/NYT-GoogleBooks#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "concurrently": "^4.1.0",
+    "cors-express": "^0.2.2",
+   
+    "express": "^4.16.4",
+    "http-proxy-middleware": "^0.19.1",
+    "idb": "^3.0.2",
+ 
+    "mongoose": "^5.4.9",
+    "react-icons": "^3.2.2"
+  }
+}
